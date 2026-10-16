@@ -73,17 +73,21 @@ Por ejemplo: `v1.2.3`
 
 ### 🔢 ¿Qué significa cada número?
 
-<escape>|</escape> Versión | Tipo | ¿Cuándo se incrementa? | Ejemplo |
+El versionado sigue el formato `vX.Y.Z`, donde cada número representa un tipo de cambio:
+
+| Número | Tipo | ¿Cuándo se incrementa? | Ejemplo |
 |---|---|---|---|
-| `X` | **Major** | Cuando se introducen cambios incompatibles con versiones anteriores. | `v1.5.0` → `v2.0.0` |
-| `Y` | **Minor** | Cuando se agregan nuevas funcionalidades compatibles. | `v1.2.3` → `v1.3.0` |
-| `Z` | **Patch** | Cuando se corrigen errores sin romper la compatibilidad. | `v1.2.3` → `v1.2.4` |
+| `X` | **Major (Mayor)** | Cuando se realizan cambios incompatibles con versiones anteriores. | `v1.5.0` → `v2.0.0` |
+| `Y` | **Minor (Menor)** | Cuando se agregan nuevas funcionalidades compatibles con versiones anteriores. | `v1.2.3` → `v1.3.0` |
+| `Z` | **Patch (Parche)** | Cuando se corrigen errores sin afectar la compatibilidad. | `v1.2.3` → `v1.2.4` |
 
 **En resumen:**
 
-- **Major:** cambios importantes o incompatibles.
-- **Minor:** nuevas funcionalidades compatibles.
-- **Patch:** correcciones de errores compatibles.
+- 🔴 **Major:** cambios importantes que pueden romper la compatibilidad.
+- 🟡 **Minor:** nuevas funcionalidades que mantienen la compatibilidad.
+- 🟢 **Patch:** correcciones de errores que no afectan la compatibilidad.
+
+**Ejemplo práctico:** si tu proyecto está en la versión `v1.2.3` y corriges un error, la siguiente versión será `v1.2.4`. Si agregas una nueva funcionalidad compatible, será `v1.3.0`. Si introduces un cambio incompatible, será `v2.0.0`.
 
 ### 🚢 Creación de tags en Git
 
